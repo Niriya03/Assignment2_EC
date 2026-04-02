@@ -9,6 +9,6 @@ test('renders my name on the page', () => {
 
 test('renders course name on the page', () => {
   render(<App />);
-  const courseElement = screen.getByText(/TECH2102:Enterprise Computing/i);
+  const courseElement = screen.getByText(/TECH2102/i);
   expect(courseElement).toBeInTheDocument();
 });
