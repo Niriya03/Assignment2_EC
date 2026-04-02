@@ -29,8 +29,11 @@ pipeline {
             }
             steps {
                 echo 'Deploying to Netlify...'
-                sh 'npm install -g netlify-cli'
-                sh 'netlify deploy --prod --dir=build --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN'
+                sh '''
+                    export PATH=$PATH:$(npm config get prefix)/bin
+                    npm install netlify-cli --prefix $HOME/.netlify
+                    $HOME/.netlify/node_modules/.bin/netlify deploy --prod --dir=build --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN
+                '''
             }
         }
 
