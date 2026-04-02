@@ -24,7 +24,7 @@ pipeline {
 
         stage('Deploy') {
             environment {
-                NETLIFY_SITE_ID = 'your-site-id-here'
+                NETLIFY_SITE_ID = '7eeaa501-f804-4793-80d4-938daa4deff1'
                 NETLIFY_AUTH_TOKEN = credentials('netlify-token')
             }
             steps {
