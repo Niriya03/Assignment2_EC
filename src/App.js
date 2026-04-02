@@ -3,8 +3,8 @@ import React from 'react';
 function App() {
   return (
     <div>
-      <h1>Assignment2</h1>
-      <p>COMP 3104 - DevOps</p>
+      <h1>Niriya</h1>
+      <p>TECH2102:Enterprise Computing</p>
     </div>
   );
 }
